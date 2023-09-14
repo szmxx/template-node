@@ -1,0 +1,77 @@
+{
+  "name": "template-node",
+  "version": "0.0.0",
+  "description": "template-node",
+  "packageManager": "pnpm@8.6.11",
+  "type": "module",
+  "author": {
+    "name": "cola",
+    "email": "szmintel@gmail.com",
+    "url": "https://aitimi.cn"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/szmxx",
+  "homepage": "https://github.com/szmxx/template-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szmxx/template-node",
+    "directory": "."
+  },
+  "bugs": {
+    "url": "https://github.com/szmxx/template-node/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "prepack": "pnpm run build",
+    "dev": "jiti dist/index.mjs",
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest dev --run",
+    "release": "pnpm test && changelogen --release --push && npm publish --access=public"
+  },
+  "keywords": [
+    "node"
+  ],
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "changelogen": "^0.5.5",
+    "consola": "^3.2.3",
+    "fast-glob": "^3.3.1",
+    "fs-extra": "^11.1.1",
+    "joi": "^17.10.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa2-cors": "^2.0.6",
+    "pathe": "^1.1.1",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.3",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/koa": "^2.13.9",
+    "@types/koa2-cors": "^2.0.3",
+    "@types/koa__router": "^12.0.1",
+    "@types/node": "^20.5.9",
+    "dotenv": "^16.3.1",
+    "jiti": "^1.20.0"
+  }
+}
