@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "@": ["src/*"],
-      "*": ["node_modules/*", "src/types/*"]
-    },
+    "module": "ESNext",
+    "paths": {},
+    "types": ["node"],
     "target": "es2017",
-    "module": "esnext",
     "lib": ["esnext"],
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "outDir": "dist",
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "include": ["./src/**/*"]
+  "include": ["src/**/*", "types/*"],
+  "extensions": [".ts", ".tsx", ".js", ".jsx"]
 }
