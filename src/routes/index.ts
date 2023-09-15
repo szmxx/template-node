@@ -13,7 +13,6 @@ import { getRouteName } from "../utils";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const routes = glob.sync(`${__dirname}/*.ts`);
-console.log(routes, __dirname);
 const baseURL = "/";
 const router = new Router();
 router.get(baseURL, (ctx) => {
@@ -22,7 +21,8 @@ router.get(baseURL, (ctx) => {
 
 routes.map(async (route) => {
   if (!route.endsWith("index.ts")) {
-    const module = await import(route);
+    let module = await import(route);
+    module = module.default ?? module;
     const routeName = getRouteName(route, baseURL);
     router.use(routeName, module.routes(), module.allowedMethods());
   }

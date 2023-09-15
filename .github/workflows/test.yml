@@ -1,4 +1,4 @@
-name: build
+name: test
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  ci:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,4 +19,4 @@ jobs:
           node-version: 16
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - run: pnpm test

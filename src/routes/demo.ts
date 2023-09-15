@@ -9,7 +9,9 @@ const router = new Router({});
 import { validate } from "../utils/validate";
 import { DemoSchema } from "../schema/demo";
 router.get("/", validate(DemoSchema), (ctx, next) => {
-  ctx.success({});
+  ctx.success({
+    msg: 12,
+  });
 });
 
 export default router;

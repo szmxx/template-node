@@ -1,0 +1,38 @@
+2023-09-15 19:07:05 info: Server running at: http://localhost:8080
+2023-09-15 19:07:06 info: Server running at: http://localhost:8080
+2023-09-15 19:07:07 error: JsonWebTokenError: invalid signature
+2023-09-15 19:07:07 error: JsonWebTokenError: invalid signature
+2023-09-15 19:13:59 info: Server running at: http://localhost:8080
+2023-09-15 19:14:43 info: 1
+2023-09-15 19:14:43 info: Server running at: http://localhost:8080
+2023-09-15 19:15:35 info: Server running at: http://localhost:8080
+2023-09-15 19:19:18 info: Server running at: http://localhost:8080
+2023-09-15 19:19:23 info: Server running at: http://localhost:8080
+2023-09-15 19:19:25 info: Server running at: http://localhost:8080
+2023-09-15 19:19:28 info: Server running at: http://localhost:8080
+2023-09-15 19:19:33 info: %s: %s start 2.904ms
+2023-09-15 19:20:03 info: Server running at: http://localhost:8080
+2023-09-15 19:21:02 info: Server running at: http://localhost:8080
+2023-09-15 19:21:14 info: Server running at: http://localhost:8080
+2023-09-15 19:21:30 error: JsonWebTokenError: invalid signature
+2023-09-15 19:21:30 error: JsonWebTokenError: invalid signature
+2023-09-15 19:50:00 info: Server running at: http://localhost:8080
+2023-09-15 19:50:12 error: JsonWebTokenError: invalid signature
+2023-09-15 19:50:13 error: JsonWebTokenError: invalid signature
+2023-09-15 19:50:22 error: JsonWebTokenError: invalid signature
+2023-09-15 19:51:27 info: Server running at: http://localhost:8080
+2023-09-15 19:51:27 error: JsonWebTokenError: invalid signature
+2023-09-15 19:51:28 error: JsonWebTokenError: invalid signature
+2023-09-15 19:51:30 info: Server running at: http://localhost:8080
+2023-09-15 19:51:40 info: Server running at: http://localhost:8080
+2023-09-15 19:51:40 error: JsonWebTokenError: invalid signature
+2023-09-15 19:51:43 error: JsonWebTokenError: invalid signature
+2023-09-15 19:51:44 info: Server running at: http://localhost:8080
+2023-09-15 19:51:47 info: Server running at: http://localhost:8080
+2023-09-15 19:51:52 info: Server running at: http://localhost:8080
+2023-09-15 19:52:35 info: Server running at: http://localhost:8080
+2023-09-15 20:50:03 info: Server running at: http://localhost:8080
+2023-09-15 20:50:05 info: Server running at: http://localhost:8080
+2023-09-15 20:50:07 info: Server running at: http://localhost:8080
+2023-09-15 20:51:11 error: JsonWebTokenError: invalid signature
+2023-09-15 20:53:10 info: Server running at: http://localhost:8080

@@ -6,9 +6,11 @@
  */
 import Koa from "koa";
 import { koaBody } from "koa-body";
-import cors from "koa2-cors";
+import cors from "@koa/cors";
 import installRouter from "./routes";
 import installMiddleware from "./middleware";
+import "./utils/logger";
+
 import "dotenv/config";
 const port = 8080;
 const app = new Koa();
@@ -18,7 +20,7 @@ installMiddleware(app);
 app.use(
   cors({
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowHeaders: ["Content-Type", "Authorization"],
     exposeHeaders: ["Content-Disposition", "Content-Length"],
   })
 );
@@ -28,6 +30,7 @@ app.use(
     multipart: true,
   })
 );
+
 installRouter(app);
 
 app.listen(port, () => {
