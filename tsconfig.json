@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@": ["src/*"]
+      "@": ["src/*"],
+      "*": ["node_modules/*", "src/types/*"]
     },
     "target": "es2017",
     "module": "esnext",
@@ -10,7 +11,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
+    "outDir": "dist",
     "strictNullChecks": true,
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*"]
 }
