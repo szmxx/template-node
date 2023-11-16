@@ -1,9 +1,3 @@
-/*
- * @Author: cola
- * @Date: 2023-09-14 18:18:57
- * @LastEditors: cola
- * @Description:
- */
 import { Context } from "koa";
 
 export function getRouteName(route: string, base = "/") {

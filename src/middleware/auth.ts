@@ -1,31 +1,27 @@
-/*
- * @Author: cola
- * @Date: 2023-09-14 19:52:35
- * @LastEditors: cola
- * @Description:
- */
 import type { Context, Next } from "koa";
-import { verifyJWTToken } from "../utils/jwt";
-import { parseToken } from "../utils";
-const WHITE_LIST = ["/"];
+import { verifyJWTToken } from "##/utils/jwt.ts";
+import { parseToken } from "##/utils/index.ts";
+const WHITE_LIST = ["/", "/wx/login"];
 export default async function (ctx: Context, next: Next) {
   const path = ctx.request.path;
   if (!WHITE_LIST.includes(path)) {
     const token = parseToken(ctx);
     try {
-      verifyJWTToken(token!);
+      const jwt = verifyJWTToken(token!);
+      ctx.user = jwt?.payload || {};
     } catch (error) {
-      console.error(error);
       ctx.auth({});
       return;
     }
   }
   return next().catch((error) => {
-    console.error(error);
-    if ((error.status = 401)) {
-      ctx.auth();
+    if (error.status === 401) {
+      ctx.auth({});
     } else {
-      throw error;
+      ctx.fail({
+        msg: error?.message || error,
+      });
+      return error;
     }
   });
 }

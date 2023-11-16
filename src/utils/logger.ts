@@ -1,10 +1,4 @@
-/*
- * @Author: cola
- * @Date: 2023-09-14 20:42:01
- * @LastEditors: cola
- * @Description:
- */
-import winston, { Logger } from "winston";
+import winston from "winston";
 import { join } from "pathe";
 
 const logDir = join(process.cwd(), "logs");
@@ -37,16 +31,16 @@ if (process.env.NODE_ENV !== "production") {
   );
 }
 
-replaceConsoleWithWinston();
+// replaceConsoleWithWinston();
 
 function replaceConsoleWithWinston(): void {
   // 替换所有 console 方法
   console.log = (...msg) =>
-    logger.info(`${msg.map((v) => v.toString()).join(" ")}`);
+    logger.info(`${msg.map((v) => v?.toString?.()).join(" ")}`);
   console.error = (...msg) =>
-    logger.error(`${msg.map((v) => v.toString()).join(" ")}`);
+    logger.error(`${msg.map((v) => v?.toString?.()).join(" ")}`);
   console.warn = (...msg) =>
-    logger.warn(`${msg.map((v) => v.toString()).join(" ")}`);
+    logger.warn(`${msg.map((v) => v?.toString?.()).join(" ")}`);
   console.debug = (...msg) =>
-    logger.debug(`${msg.map((v) => v.toString()).join(" ")}`);
+    logger.debug(`${msg.map((v) => v?.toString?.()).join(" ")}`);
 }

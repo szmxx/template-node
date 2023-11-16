@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": "./src",
     "module": "ESNext",
-    "paths": {},
-    "types": ["node"],
-    "target": "es2017",
+    "paths": {
+      "##/*": ["./src/*"]
+    },
+    "target": "esnext",
     "lib": ["esnext"],
+    "types": ["node"],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -13,8 +16,16 @@
     "outDir": "dist",
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "removeComments": true,
+    "allowImportingTsExtensions": true,
+    "noImplicitAny": false
   },
   "include": ["src/**/*", "types/*"],
-  "extensions": [".ts", ".tsx", ".js", ".jsx"]
+  "exclude": ["node_modules/**"],
+  "extensions": [".ts", ".tsx", ".js", ".jsx"],
+  "ts-node": {
+    "esm": true,
+    "files": true
+  }
 }

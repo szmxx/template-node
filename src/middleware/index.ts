@@ -1,15 +1,6 @@
-/*
- * @Author: cola
- * @Date: 2023-09-14 18:01:48
- * @LastEditors: cola
- * @Description:
- */
 import type Koa from "koa";
-import glob from "fast-glob";
-import { fileURLToPath } from "url";
-import { dirname } from "pathe";
-import auth from "./auth";
-import format from "./format";
+import auth from "./auth.ts";
+import format from "./format.ts";
 
 const middlewares = [format, auth];
 

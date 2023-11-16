@@ -1,15 +1,9 @@
-/*
- * @Author: cola
- * @Date: 2023-09-14 17:21:54
- * @LastEditors: cola
- * @Description:
- */
 import type Koa from "koa";
 import { fileURLToPath } from "url";
 import { dirname } from "pathe";
 import Router from "@koa/router";
 import glob from "fast-glob";
-import { getRouteName } from "../utils";
+import { getRouteName } from "##/utils/index.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const routes = glob.sync(`${__dirname}/*.ts`);
